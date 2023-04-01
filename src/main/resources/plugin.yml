@@ -1,0 +1,3 @@
+name: WsLib
+version: '${project.version}'
+main: cn.whitesoul.wslib.Main
