@@ -1,9 +1,13 @@
 package cn.whitesoul.wslib.message;
 
-import cn.whitesoul.wslib.Main;
+import org.bukkit.plugin.java.JavaPlugin;
 
 public class ServerInfo {
-    public static void sendInfo(String info) {
-        Main.INSTANCE.getLogger().info(info.replace("&", "§"));
+    private final JavaPlugin plugin;
+    public ServerInfo(JavaPlugin plugin) {
+        this.plugin = plugin;
+    }
+    public void sendInfo(String info) {
+        this.plugin.getLogger().info(info.replace("&", "§"));
     }
 }

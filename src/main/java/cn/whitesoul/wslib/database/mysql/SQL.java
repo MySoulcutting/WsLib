@@ -52,8 +52,15 @@ public class SQL {
         }
         return null;
     }
-
+    //数据库删除
     public static void deleteUUID(String table, String where) {
+        try {
+            String sql = "DELETE FROM " + table + " WHERE " + where;
+            Mysql.getConn().prepareStatement(sql);
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("数据库删除出错");
+        }
 
     }
 }

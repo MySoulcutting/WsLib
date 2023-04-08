@@ -1,3 +1,9 @@
 name: WsLib
 version: '${project.version}'
-main: cn.whitesoul.wslib.Main
+main: cn.whitesoul.wslib.WsLib
+author: 白魂
+depend:
+  - Vault
+commands:
+  serverinfo:
+    description: 查看服务器信息
